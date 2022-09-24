@@ -52,7 +52,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
-          <button type="button" class="hero-button selection">Замовити послугу</button>
+          <button type="button" class="hero-button selection" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
       </section>
       <!-- 3 блок переваги -->
@@ -113,37 +115,37 @@
             <li class="what_we_doing-item">
               <div class="what_we_doing-wrap">
                 <img
-                class="img-block"
-                src="./images/a_person_types_text_on_keyboard.jpg"
-                alt="людина печатає текст на клавіатурі"
-                width="370"
-                height="294"
-              />
-              <p class="what_we_doing-details">десктопні додатки</p>
-            </div>
-            </li>
-            <li class="what_we_doing-item">
-              <div class="what_we_doing-wrap">
-              <img
-                class="img-block"
-                src="./images/a_person_works_at_laptop_and_holds_smartphone.jpg"
-                alt="людина працює за ноутбуком та тримає смартфон"
-                width="370"
-                height="294"
-              />
-               <p class="what_we_doing-details">мобільні додатки</p>
+                  class="img-block"
+                  src="./images/a_person_types_text_on_keyboard.jpg"
+                  alt="людина печатає текст на клавіатурі"
+                  width="370"
+                  height="294"
+                />
+                <p class="what_we_doing-details">десктопні додатки</p>
               </div>
             </li>
             <li class="what_we_doing-item">
               <div class="what_we_doing-wrap">
-              <img
-                class="img-block"
-                src="./images/a_person_works_with_tablet.jpg"
-                alt="людина працює із планшетом"
-                width="370"
-                height="294"
-              />
-               <p class="what_we_doing-details">дизайнерські рішення</p>
+                <img
+                  class="img-block"
+                  src="./images/a_person_works_at_laptop_and_holds_smartphone.jpg"
+                  alt="людина працює за ноутбуком та тримає смартфон"
+                  width="370"
+                  height="294"
+                />
+                <p class="what_we_doing-details">мобільні додатки</p>
+              </div>
+            </li>
+            <li class="what_we_doing-item">
+              <div class="what_we_doing-wrap">
+                <img
+                  class="img-block"
+                  src="./images/a_person_works_with_tablet.jpg"
+                  alt="людина працює із планшетом"
+                  width="370"
+                  height="294"
+                />
+                <p class="what_we_doing-details">дизайнерські рішення</p>
               </div>
             </li>
           </ul>
@@ -465,5 +467,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-button" data-modal-close>
+          <svg class="icon-close-black-18dp" width="30px" height="30px">
+            <use href="./images/sprite.svg#icon-close-black-18dp"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
