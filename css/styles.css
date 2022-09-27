@@ -9,10 +9,6 @@ h6 {
   padding: 0;
   margin: 0;
 }
-/* button {
-  border: none;
-} */
-
 body {
   background-color: var(--brand-color);
   color: var(--third-black-color);
@@ -39,7 +35,7 @@ body {
   --bacground-what-we-doing-color: rgba(47, 48, 58, 0.8);
   --background-portfolio-box-details: rgba(33, 150, 243, 0.9);
   --backdrop-color: rgba(0, 0, 0, 0.2);
-  --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+  --time-cubic-bezier: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 li {
   list-style-type: none;
@@ -85,7 +81,7 @@ header {
   text-decoration: none;
   display: block;
   padding: 32px 0;
-  transition: transform 250ms var(--cubic-bezier);
+  transition: color var(--time-cubic-bezier);
 }
 .site-nav.link.current {
   color: var(--accent-color);
@@ -100,11 +96,11 @@ header {
   border-radius: 2px;
   background-color: var(--accent-color);
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
 }
 .link,
 .icon {
-  transition: transform 250ms var(--cubic-bezier);
+  transition: fill var(--time-cubic-bezier);
 }
 .link:hover,
 .link:focus {
@@ -125,7 +121,7 @@ header {
   text-decoration: none;
   display: block;
   padding: 32px 0;
-  transition: transform 250ms var(--cubic-bezier);
+  transition: color var(--time-cubic-bezier);
 }
 .mailto-tel-header.link {
   letter-spacing: 0.02em;
@@ -204,14 +200,14 @@ nav.container {
   gap: 8px;
   margin-bottom: 34px;
 }
-.selection {
-  transition: transform 250ms var(--cubic-bezier);
+.hero-selection {
+  transition: background-color var(--time-cubic-bezier);
 }
-.selection:hover,
-.selection:focus {
+.hero-selection:hover,
+.hero-selection:focus {
   background-color: var(--active-color);
 }
-.selection:active {
+.hero-selection:active {
   color: var(--brand-color);
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -246,10 +242,12 @@ nav.container {
   border-radius: 4px;
   border-color: transparent;
   padding: 6px 22px;
-  transition: transform 250ms var(--cubic-bezier);
+  transition: color var(--time-cubic-bezie),
+              background-color var(--time-cubic-bezie),
+              box-shadow var(--time-cubic-bezie);
 }
-.link-filter.selection:hover,
-.link-filter.selection:focus {
+.link-filter:hover,
+.link-filter:focus {
   color: var(--brand-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -287,13 +285,14 @@ nav.container {
   outline: 1px solid var(--customer-border-color);
   fill: var(--customer-border-color);
   border-radius: 4px;
-  transition: transform 250ms var(--cubic-bezier);
-}
+  transition: fill var(--time-cubic-bezier),
+              border var(--time-cubic-bezier);
+} 
 .customer-link:focus,
 .customer-link:active,
 .customer-link:hover {
   fill: var(--accent-color);
-  outline: 1px solid var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 .advantages-title {
   line-height: 1.14;
@@ -427,7 +426,7 @@ nav.container {
   line-height: 1.56;
   padding: 63px 24px;
   transform: translateY(101%);
-  transition: transform 250ms var(--cubic-bezier);
+  transition: transform var(--time-cubic-bezier);
 }
 
 .portfolio-box-link-wrap {
@@ -453,11 +452,13 @@ nav.container {
   letter-spacing: 0.03em;
   color: var(--brand-color);
   text-decoration: none;
+  transition: color var(--time-cubic-bezier);
 }
 .mailto-tel-ground {
   line-height: 1.71;
   color: var(--mailto-ground-color);
   text-decoration: none;
+  transition: color var(--time-cubic-bezier);
 }
 .ground-li {
   margin-bottom: 9px;
@@ -489,7 +490,7 @@ nav.container {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 250ms var(--cubic-bezier);
+  transition: background-color var(--time-cubic-bezier);
 }
 .social-web:hover,
 .social-web:focus {
@@ -513,7 +514,8 @@ nav.container {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 250ms var(--cubic-bezier);
+  transition: color var(--time-cubic-bezier),
+              background-color var(--time-cubic-bezier);
 }
 .s-w-our-team:hover,
 .s-w-our-team:focus {
@@ -527,6 +529,7 @@ nav.container {
   display: block;
   text-decoration: none;
   color: var(--third-black-color);
+  transition: box-shadow var(--time-cubic-bezier);
 }
 .portfolio-box-link:hover,
 .portfolio-box-link:focus {
@@ -559,12 +562,12 @@ nav.container {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms var(--cubic-bezier);
+  transition: transform var(--time-cubic-bezier);
 }
 .is-hidden {
   visibility: hidden; 
   pointer-events: none; 
-  transition: visibility 250ms var(--cubic-bezier);
+  transition: visibility var(--time-cubic-bezier);
 }
 .close-button {
   display: flex;
