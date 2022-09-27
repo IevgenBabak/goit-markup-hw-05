@@ -198,7 +198,7 @@ nav.container {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 .hero-selection {
   transition: background-color var(--time-cubic-bezier);
@@ -242,9 +242,9 @@ nav.container {
   border-radius: 4px;
   border-color: transparent;
   padding: 6px 22px;
-  transition: color var(--time-cubic-bezie),
-              background-color var(--time-cubic-bezie),
-              box-shadow var(--time-cubic-bezie);
+  transition: color var(--time-cubic-bezier),
+              background-color var(--time-cubic-bezier),
+              box-shadow var(--time-cubic-bezier);
 }
 .link-filter:hover,
 .link-filter:focus {
@@ -282,17 +282,17 @@ nav.container {
   align-items: center;
   width: 170px;
   height: 92px;
-  outline: 1px solid var(--customer-border-color);
+  border: 1px solid var(--customer-border-color);
   fill: var(--customer-border-color);
   border-radius: 4px;
   transition: fill var(--time-cubic-bezier),
-              border var(--time-cubic-bezier);
+              border-color var(--time-cubic-bezier);
 } 
 .customer-link:focus,
 .customer-link:active,
 .customer-link:hover {
   fill: var(--accent-color);
-  border: 1px solid var(--accent-color);
+  border-color: var(--accent-color);
 }
 .advantages-title {
   line-height: 1.14;
