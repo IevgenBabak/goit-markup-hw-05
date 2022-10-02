@@ -27,6 +27,7 @@ body {
   --active-color: #188ce8;
   --background-button-color: #f5f4fa;
   --mailto-ground-color: rgba(255, 255, 255, 0.6);
+  --subscribe-border-color: rgba(255, 255, 255, 0.3);
   --gray-border-color: #eeeeee;
   --header-line-color: #ececec;
   --customer-border-color: #afb1b8;
@@ -36,6 +37,7 @@ body {
   --background-portfolio-box-details: rgba(33, 150, 243, 0.9);
   --backdrop-color: rgba(0, 0, 0, 0.2);
   --time-cubic-bezier: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --modal-no-focus-color: rgba(33, 33, 33, 0.2);
 }
 li {
   list-style-type: none;
@@ -242,9 +244,8 @@ nav.container {
   border-radius: 4px;
   border-color: transparent;
   padding: 6px 22px;
-  transition: color var(--time-cubic-bezier),
-              background-color var(--time-cubic-bezier),
-              box-shadow var(--time-cubic-bezier);
+  transition: color var(--time-cubic-bezier), background-color var(--time-cubic-bezier),
+    box-shadow var(--time-cubic-bezier);
 }
 .link-filter:hover,
 .link-filter:focus {
@@ -285,9 +286,8 @@ nav.container {
   border: 1px solid var(--customer-border-color);
   fill: var(--customer-border-color);
   border-radius: 4px;
-  transition: fill var(--time-cubic-bezier),
-              border-color var(--time-cubic-bezier);
-} 
+  transition: fill var(--time-cubic-bezier), border-color var(--time-cubic-bezier);
+}
 .customer-link:focus,
 .customer-link:active,
 .customer-link:hover {
@@ -499,6 +499,10 @@ nav.container {
 .soc-web {
   fill: var(--brand-color);
 }
+.subscribe {
+  margin-left: 93px;
+}
+
 .our-team-web {
   display: flex;
   gap: 10px;
@@ -514,8 +518,7 @@ nav.container {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color var(--time-cubic-bezier),
-              background-color var(--time-cubic-bezier);
+  transition: color var(--time-cubic-bezier), background-color var(--time-cubic-bezier);
 }
 .s-w-our-team:hover,
 .s-w-our-team:focus {
@@ -555,6 +558,7 @@ nav.container {
   width: 528px;
   height: 581px;
   position: absolute;
+  padding: 40px;
   top: 50%;
   left: 50%;
   background: var(--brand-color);
@@ -565,8 +569,8 @@ nav.container {
   transition: transform var(--time-cubic-bezier);
 }
 .is-hidden {
-  visibility: hidden; 
-  pointer-events: none; 
+  visibility: hidden;
+  pointer-events: none;
   transition: visibility var(--time-cubic-bezier);
 }
 .close-button {
@@ -580,8 +584,162 @@ nav.container {
   border-radius: 50%;
   background: var(--brand-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.close-button:hover {
+  fill: var(--accent-color);
+  transition: fill var(--time-cubic-bezier);
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.4);
 }
+.modal-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: var(--second-black-color);
+  margin-bottom: 12px;
+}
+.form-element {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.form-element label {
+  margin-bottom: 4px;
+}
+.input-wrap {
+  position: relative;
+}
+.form-element svg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+.form-element input {
+  border: none;
+  height: 40px;
+  border: 1px solid var(--modal-no-focus-color);
+  border-radius: 4px;
+  padding-left: 42px;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+}
+.footer-input {
+  width: 358px;
+  height: 50px;
+  background: var(--backgroun-footer-color);
+  border: 1px solid var(--subscribe-border-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: none;
+  color: var(--brand-color);
+}
+.footer-input placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--mailto-ground-color);
+}
+.subscribe-btn {
+  border: none;
+  width: 210.88px;
+  height: 50px;
+  color: var(--brand-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap:10.54px;
+  justify-content: center;
+  cursor: pointer;
+}
+.submit-btn {
+  border: none;
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--brand-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  display: flex;
+  justify-content:center;
+  align-items: center; 
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.submit-btn:focus {
+  background: var(--active-color);
+}
+.footer-form {
+  display: flex;
+  gap:12px;
+}
+.form-element input:focus {
+  border: 1px solid var(--accent-color);
+}
+.form-element input:focus + svg {
+  fill: var(--accent-color);
+  transition: fill var(--time-cubic-bezier);
+}
+.modal-form .btn {
+  border: none;
+  padding: 10px 52px;
+  color: var(--brand-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px; 
+}
+.contract {
+  color: var(--accent-color);
+  text-decoration-line: underline;
+}
+textarea {
+  border: none;
+  width: 448px;
+  height: 120px;
+  border: 1px solid var(--modal-no-focus-color);
+  border-radius: 4px;
+  resize: none;
+  padding: 12px 16px;
+  margin-top: 4px;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 20px;
+}
+textarea:focus {
+  border: 1px solid var(--accent-color);
+}
+.form-field {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+.textarea-label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+.accept-label {
+  font-weight: 400;
+  line-height: 1.71;
+}     
 
